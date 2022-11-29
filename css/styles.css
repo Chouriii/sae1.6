@@ -1,0 +1,139 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+@font-face{
+    font-family: Opensans;
+    src: url(../Font/OpenSans.ttf);
+}
+body{
+    margin: auto;
+    max-width: 1200px;
+    min-width: none;
+    font-size: 120%;
+    background-color: #e4e4e4;
+    color: #2B2B2B;
+    font-family: Opensans;
+}
+header{
+    background-color: rgb(44, 148, 204);
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    user-select: none;
+    position:sticky;
+    border-radius: 0px 20px;
+    margin-bottom: 5%;
+}
+h1{
+    display:inline;
+    font-size: 180%;
+}
+h2{
+    color:rgb(44, 148, 204);
+    font-size: 180%;
+}
+nav{
+    color: #F8F8F8;
+    display: flex;
+    justify-content: flex-end;
+}
+nav > #question{
+    margin-left: 0;
+}
+nav > div{
+    top: 0;
+    margin: 0 0 1.5% 2%;
+    padding: 0 1%;
+    font-size: 150%;
+    display: flex;
+    position: relative;
+    border: 1px solid #F8F8F8;
+}
+nav div:hover{
+    background-color: #F8F8F8;
+}
+nav > div:nth-child(2){
+    border-radius: 0 0 0 10px;
+}
+nav > div:nth-child(2):hover > div{
+    border-radius: 0 0 0 10px;
+}
+nav > div:nth-child(4){
+    border-radius: 0 10px 0 0;
+}
+#question{
+    flex-grow: 1;
+}
+a{
+    user-select: none;
+    text-decoration: none;
+    color: #F8F8F8;
+}
+nav div:hover a{
+    color: rgb(44, 148, 204);
+}
+a:visited{
+    color: #F8F8F8;
+}
+nav > div:hover > div.submenu{
+    display: block;
+}
+.submenu{
+    font-size: 75%;
+    position: absolute;
+    padding: 0 1.5% 5% 0;
+    top: 100%;
+    left: -1px;
+    background-color: #F8F8F8;
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+nav > div:first-child > div.submenu{
+    border-radius: 0 0 0 10px;
+}
+.sub{
+    display: inline-block;
+    position: relative;
+    color: silver;
+    margin-bottom: 2px;
+} 
+.sub:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: silver;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.sub:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+article{
+    background-color: #F8F8F8;
+    padding: 2%;
+    border-radius:20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+@media screen and (max-width: 803px){
+    body{
+        font-size: 100%;
+        background-color: aqua;
+    }
+    #nav1{
+        display: none;
+    }
+    
+}
+#gotop{
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+}
