@@ -2,19 +2,27 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
 }
-@font-face{
-    font-family: Opensans;
-    src: url(../Font/OpenSans.ttf);
-}
 body{
     margin: auto;
-    max-width: 1200px;
-    min-width: none;
+    width: 84%;
+    max-width: 1800px;
     font-size: 120%;
     background-color: #e4e4e4;
     color: #2B2B2B;
-    font-family: Opensans;
+    font-family: Opensans, Tahoma, Geneva, Verdana, sans-serif;
 }
+a{
+    user-select: none;
+    text-decoration: none;
+    color: #F8F8F8;
+}
+a:visited{
+    color: #F8F8F8;
+}
+
+
+
+/* Header */
 header{
     background-color: rgb(44, 148, 204);
     padding: 1%;
@@ -28,20 +36,20 @@ h1{
     display:inline;
     font-size: 180%;
 }
-h2{
-    color:rgb(44, 148, 204);
-    font-size: 180%;
+#question{
+    flex-grow: 1;
 }
 nav{
     color: #F8F8F8;
     display: flex;
     justify-content: flex-end;
 }
-nav > #question{
+#question{
     margin-left: 0;
 }
-nav > div{
+.button{
     top: 0;
+    height: 10%;
     margin: 0 0 1.5% 2%;
     padding: 0 1%;
     font-size: 150%;
@@ -49,48 +57,17 @@ nav > div{
     position: relative;
     border: 1px solid #F8F8F8;
 }
-nav div:hover{
+.button:hover{
     background-color: #F8F8F8;
 }
-nav > div:nth-child(2){
+.button:nth-child(2){
     border-radius: 0 0 0 10px;
 }
-nav > div:nth-child(2):hover > div{
+.button:nth-child(2):hover > div{
     border-radius: 0 0 0 10px;
 }
-nav > div:nth-child(4){
+.button:nth-child(4){
     border-radius: 0 10px 0 0;
-}
-#question{
-    flex-grow: 1;
-}
-a{
-    user-select: none;
-    text-decoration: none;
-    color: #F8F8F8;
-}
-nav div:hover a{
-    color: rgb(44, 148, 204);
-}
-a:visited{
-    color: #F8F8F8;
-}
-nav > div:hover > div.submenu{
-    display: block;
-}
-.submenu{
-    font-size: 75%;
-    position: absolute;
-    padding: 0 1.5% 5% 0;
-    top: 100%;
-    left: -1px;
-    background-color: #F8F8F8;
-    display: none;
-    width: 100%;
-    text-align: center;
-}
-nav > div:first-child > div.submenu{
-    border-radius: 0 0 0 10px;
 }
 .sub{
     display: inline-block;
@@ -114,21 +91,72 @@ nav > div:first-child > div.submenu{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+/* Burger*/
+rect{
+    fill: white;
+    width: 34px;
+    height: 4px;
+    border-radius: 5px;
+}
+#burger, #b_subpages{
+    display: none;
+    border: none;
+}
+#burger:hover #b_submenu{
+    display: block;
+}
+.button:hover a{
+    color: rgb(44, 148, 204);
+}
+.button:hover > div.submenu{
+    display: block;
+}
+.submenu{
+    font-size: 75%;
+    position: absolute;
+    padding: 0 1.5% 5% 0;
+    top: 100%;
+    left: -1px;
+    background-color: #F8F8F8;
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+nav > div:first-child > div.submenu{
+    border-radius: 0 0 0 10px;
+}
+#b_submenu{
+    display: none;
+    right: 0;
+    position: absolute;
+    padding: 1.5%;
+    border-radius: 5px;
+    background-color: rgb(44, 148, 204);
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#burger div div:hover #b_subpages{
+    display: block;
+}
+#b_subpages{
+    position: absolute;
+    padding: 5%;
+    background-color: rgb(44, 148, 204);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.01) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+
+/* Main */
+h2{
+    color:rgb(44, 148, 204);
+    font-size: 180%;
+}
 article{
     background-color: #F8F8F8;
     padding: 2%;
-    border-radius:20px;
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-@media screen and (max-width: 803px){
-    body{
-        font-size: 100%;
-        background-color: aqua;
-    }
-    #nav1{
-        display: none;
-    }
-    
 }
 #gotop{
     height: 40px;
@@ -136,4 +164,46 @@ article{
     position: fixed;
     right: 1%;
     bottom: 1%;
+}
+
+
+
+/* Responsive */
+@media (max-width: 850px){
+    body{
+        font-size: 90%;
+    }
+    .button{
+        display: none;
+    }
+    #burger{
+        display: inline;
+        margin-right: 3%;
+    }
+}
+
+
+
+/* Contact Page */
+fieldset{
+    border-radius: 18px;
+    background-color: white;
+}
+input, textarea{
+    border-radius: 5px;
+    border: 1px solid #2B2B2B;
+    background-color: #F8F8F8;
+}
+#send{
+    display: inline;
+    right: 0;
+    top: 0;
+}
+
+
+
+/* Font */
+@font-face{
+    font-family: Opensans;
+    src: url(../Font/OpenSans.ttf);
 }
