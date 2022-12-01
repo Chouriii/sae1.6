@@ -134,6 +134,7 @@ nav > div:first-child > div.submenu{
     border-radius: 5px;
     background-color: rgb(44, 148, 204);
     box-shadow: rgba(0, 0, 0, 0.01) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    text-align: right;
 }
 #burger div div:hover #b_subpages{
     display: block;
@@ -144,6 +145,7 @@ nav > div:first-child > div.submenu{
     background-color: rgb(44, 148, 204);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.01) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    text-align: center;
 }
 
 
@@ -179,6 +181,7 @@ article{
     #burger{
         display: inline;
         margin-right: 3%;
+        font-size: 150%;
     }
 }
 
