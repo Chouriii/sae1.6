@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+    <header id="top">
+        <h1><a href="../index.html"><strong>Intelligences Artificielles</strong></a></h1>
+        <nav>
+            <blockquote id="question">Les I.A. sont elles vraiment intelligentes?</blockquote>
+            <div class="button">
+                <a href="../index.html">Acceuil</a>
+            </div>
+            <div class="button">
+                <a href="">Pages</a>
+                <div class="submenu">
+                    <div><a href="page1.html" class="sub">Page 1</a></div>
+                    <div><a href="page2.html" class="sub">Page 2</a></div>
+                    <div><a href="page3.html" class="sub">Page 3</a></div>
+                    <div><a href="page4.html" class="sub">Page 4</a></div>
+                </div>
+            </div>
+            <div class="button">
+                <a href="contact.html">Contacts</a>
+            </div>
+            <div id="burger">
+                <svg width="34px" height="27px">
+                    <rect/><rect y="11"/><rect y="23"/>
+                </svg>
+                <div id="b_submenu">
+                    <div>
+                        <a href="../index.html">Acceuil</a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contacts</a>
+                    </div>
+                    <div>
+                        <a href="">Pages</a>
+                        <div id="b_subpages">
+                            <a href="page1.html">Page 1</a>
+                            <a href="page2.html">Page 2</a>
+                            <a href="page3.html">Page 3</a>
+                            <a href="page4.html">Page 4</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <form>
+        <fieldset>
+            <legend>Nous contacter </legend>
+            <p>
+                <span>Vous avez connue notre site via:</span>
+                <div style="text-indent: 3%;">
+                    <p>
+                        <input type="radio" name="source" value="search">
+                        <label for="guess1">Une recherche internet</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="source" value="friend">
+                        <label for="guess2">Un proche à vous</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="source" value="article">
+                        <label for="guess3">Un autre article</label>
+                    </p>
+                        <input type="radio" name="source" value="other">
+                        <label for="gues4">Autre</label>
+                    </p>
+                </div>
+            <p>
+                <label for="dateVoulue">Date à laquelle vous souhaitez être recontacté</label>
+                <input type="date" name="date" id="dateVoulue" min=today>
+            </p>
+            <p>
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="email" pattern=".+@globex\.com" size="30" placeholder="Rosenfeld@etu.umontpellier.fr">
+            </p>
+            <p>
+                <textarea placeholder="Si vous avez une remarque" maxlength="500" autocapitalize="sentences" rows="13" cols="70"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Envoyer" class="send" id="send">
+            </p> 
+        </fieldset>  
+    </form>
+</body>
+<footer>
+    <p>© 2022 - Tous droits réservés</p>
+</footer>
+</html>
